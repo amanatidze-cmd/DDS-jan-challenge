@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chatbot UI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app" id="app">
+    <header class="header">
+      <div class="header-left">
+        <div class="avatar bot-avatar" aria-hidden="true">🤖</div>
+        <div>
+          <h1 class="title">ChatBot</h1>
+          <p class="subtitle">Ask anything — streaming responses supported</p>
+        </div>
+      </div>
+      <div class="header-right">
+        <button id="clearBtn" class="btn small">Clear</button>
+      </div>
+    </header>
+
+    <section class="chat" id="chat" aria-live="polite">
+      <ul id="messages" class="messages" role="list"></ul>
+      <div id="typingIndicator" class="typing-indicator" hidden>
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+    </section>
+
+    <form id="inputForm" class="input-area" aria-label="Send a message">
+      <div class="controls">
+        <label for="fileInput" class="attach" title="Attach file" aria-hidden="true">📎</label>
+        <input id="fileInput" type="file" style="display:none" />
+      </div>
+
+      <textarea id="messageInput" class="message-input" rows="1" placeholder="Type a message…" aria-label="Message"></textarea>
+
+      <div class="actions">
+        <button id="sendBtn" class="btn primary" type="submit">Send</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
